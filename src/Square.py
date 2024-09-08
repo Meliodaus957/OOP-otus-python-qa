@@ -1,5 +1,5 @@
 from Rectangle import Rectangle
-
+from abc import ABC
 
 class Square(Rectangle):
     def __init__ (self, side_a):
@@ -7,6 +7,5 @@ class Square(Rectangle):
         self.side_a = side_a
 
 
-s = Square(-1)
-print(s.get_area)
-print(s.get_perimeter)
+s = Square(5)
+print(s.add_area(figure=s))

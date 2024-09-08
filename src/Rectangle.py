@@ -1,3 +1,23 @@
+from abc import ABC, abstractmethod
+
+
+class Figure(ABC):
+
+
+    @property
+    @abstractmethod
+    def get_area(self):
+        pass
+
+    @property
+    @abstractmethod
+    def get_perimeter(self):
+        pass
+
+    def add_area(self, figure):
+        if not isinstance(figure, Figure):
+            raise ValueError(f"аргумент figure должнен быть объектом класса Rectangle!!!!")
+        return self.get_area + figure.get_area
 
 
 class NonNegative:
@@ -9,10 +29,10 @@ class NonNegative:
 
     def __set__(self, instance, value):
         if value < 0:
-            raise ValueError("не может быть <figure> со стороной меньше 0!!!!")
+            raise ValueError("не может быть фигуры со стороной меньше 0!!!!")
         instance.__dict__[self.name] = value
 
-class Rectangle:
+class Rectangle(Figure):
     side_a = NonNegative()
     side_b = NonNegative()
 
@@ -30,3 +50,4 @@ class Rectangle:
 
 
 
+r = Rectangle(3,5)
