@@ -1,20 +1,21 @@
 from Rectangle import Figure, NonNegative
 
-class Triangle:
+
+class Triangle(Figure):
 
     a = NonNegative()
     b = NonNegative()
     c = NonNegative()
     h = NonNegative()
 
-    def __init__(self, a,b,c,h):
+    def __init__(self, a, b, c, h):
         self.a = a
         self.b = b
         self.c = c
         self.h = h
 
     @property
-    def get_area (self):
+    def get_area(self):
         return self.a + self.b + self.c
 
     @property
@@ -22,6 +23,6 @@ class Triangle:
         return 1/2 * self.a * self.h
 
 
-t = Triangle(0,10,12,7)
+t = Triangle(0, 10, 12, 7)
 print(t.get_area)
 print(t.get_perimeter)

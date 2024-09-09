@@ -1,10 +1,11 @@
 from Rectangle import Figure, NonNegative
 import math
 
-class Circle():
+
+class Circle(Figure):
     r = NonNegative()
 
-    def __init__(self, r ):
+    def __init__(self, r):
         self.r = r
 
     @property
