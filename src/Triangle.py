@@ -1,4 +1,5 @@
-from Rectangle import Figure, NonNegative
+from Figure import Figure
+from src.Figure import NonNegative
 
 
 class Triangle(Figure):

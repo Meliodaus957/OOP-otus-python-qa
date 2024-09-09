@@ -1,9 +1,10 @@
-from Rectangle import Figure, NonNegative
 import math
-
+from src.Figure import NonNegative
+from Figure import Figure
 
 class Circle(Figure):
-    r = NonNegative()
+
+    r = NonNegative
 
     def __init__(self, r):
         self.r = r
