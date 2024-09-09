@@ -2,6 +2,7 @@ import math
 from src.Figure import NonNegative
 from Figure import Figure
 
+
 class Circle(Figure):
 
     r = NonNegative
