@@ -5,7 +5,7 @@ from Figure import Figure
 
 class Circle(Figure):
 
-    r = NonNegative
+    r = NonNegative()
 
     def __init__(self, r):
         self.r = r
