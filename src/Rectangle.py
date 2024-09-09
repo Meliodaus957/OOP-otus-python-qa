@@ -3,6 +3,7 @@ from src.Figure import NonNegative
 
 
 class Rectangle(Figure):
+
     side_a = NonNegative()
     side_b = NonNegative()
 
