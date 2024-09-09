@@ -11,15 +11,15 @@ class Circle(Figure):
         self.r = r
 
     @property
-    def get_area(self):
+    def area(self):
         return math.pi * self.r ** 2
 
     @property
-    def get_perimeter(self):
+    def perimeter(self):
         return 2 * (math.pi * self.r)
 
 
 c = Circle(5)
 
-print(c.get_area)
-print(c.get_perimeter)
+print(c.area)
+print(c.perimeter)

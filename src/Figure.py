@@ -5,12 +5,12 @@ class Figure(ABC):
 
     @property
     @abstractmethod
-    def get_area(self):
+    def area(self):
         pass
 
     @property
     @abstractmethod
-    def get_perimeter(self):
+    def perimeter(self):
         pass
 
     def add_area(self, figure):
@@ -18,7 +18,7 @@ class Figure(ABC):
             raise ValueError(
                 "аргумент figure должнен быть объектом класса Rectangle!!!!",
             )
-        return self.get_area + figure.get_area
+        return self.area + figure.area
 
 
 class NonNegative:

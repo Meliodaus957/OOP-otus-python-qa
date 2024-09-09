@@ -16,14 +16,14 @@ class Triangle(Figure):
         self.h = h
 
     @property
-    def get_area(self):
+    def area(self):
         return self.a + self.b + self.c
 
     @property
-    def get_perimeter(self):
+    def perimeter(self):
         return 1/2 * self.a * self.h
 
 
-t = Triangle(0, 10, 12, 7)
-print(t.get_area)
-print(t.get_perimeter)
+t = Triangle(5, 10, 12, 7)
+print(t.area)
+print(t.perimeter)

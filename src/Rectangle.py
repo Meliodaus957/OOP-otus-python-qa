@@ -20,3 +20,5 @@ class Rectangle(Figure):
 
 
 r = Rectangle(3, 5)
+print(r.area)
+print(r.perimeter)
