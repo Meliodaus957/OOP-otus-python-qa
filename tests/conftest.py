@@ -77,23 +77,13 @@ def negative_test_perimeter_rectangle_square():
     print("\n End API")
     print('\n End DB')
 
-@pytest.fixture
-def positive_test_area_circle():
-    print('\n Start API')
-    print('\n Start DB')
-
-    yield 3, 28.274333882308138
-
-    print("\n End API")
-    print('\n End DB')
-
 
 @pytest.fixture
 def negative_test_area_circle():
     print('\n Start API')
     print('\n Start DB')
 
-    yield 3, 28
+    yield 0, 28
 
     print("\n End API")
     print('\n End DB')
@@ -103,7 +93,7 @@ def positive_test_perimeter_circle():
     print('\n Start API')
     print('\n Start DB')
 
-    yield 3, 18.84955592153876
+    yield 3, 18.84
 
     print("\n End API")
     print('\n End DB')

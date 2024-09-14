@@ -18,25 +18,25 @@ def test_rectangle_area_positive(side_c, side_d, area_z):
 def test_rectangle_integer_negative(negative_test_area_rectangle_square):
     side_a, side_b, area = negative_test_area_rectangle_square
     r = Rectangle(side_a, side_b)
-    assert r.area == area, 'Area not should be 15'
+    assert r.area == area, f'Area not should be {area}'
 
 
 def test_rectangle_integer_positive(positive_test_area_rectangle_square):
     side_a, side_b, area = positive_test_area_rectangle_square
     r = Rectangle(side_a, side_b)
-    assert r.area == area, 'Area should be 15'
+    assert r.area == area, f'Area should be {area}'
 
 
 def test_rectangle_perimeter_positive(positive_test_perimeter_rectangle_square):
     side_a, side_b, perimeter = positive_test_perimeter_rectangle_square
     r = Rectangle(side_a, side_b)
-    assert r.perimeter == perimeter, "Perimeter should be 16"
+    assert r.perimeter == perimeter, f"Perimeter should be {perimeter}"
 
 
 def test_rectangle_perimeter_negative(negative_test_perimeter_rectangle_square):
     side_a, side_b, perimeter = negative_test_perimeter_rectangle_square
     r = Rectangle(side_a, side_b)
-    assert r.perimeter == perimeter, "Perimeter not should be 16"
+    assert r.perimeter == perimeter, f"Perimeter not should be {perimeter}"
 
 
 def test_int_area(negative_int_test):

@@ -29,6 +29,6 @@ class NonNegative:
         return instance.__dict__[self.name]
 
     def __set__(self, instance, value):
-        if value < 0:
-            raise ValueError("не может быть фигуры со стороной меньше 0!!!!")
+        if value <= 0:
+            raise ValueError("не может быть фигуры со стороной меньше либо равной нулю!!!!")
         instance.__dict__[self.name] = value

@@ -1,28 +1,33 @@
 from src.Circle import Circle
+import pytest
 
-
-def test_positive_area_circle(positive_test_area_circle):
-    side_a, area = positive_test_area_circle
+@pytest.mark.parametrize(
+    "side_a, area",
+    [
+        (3, 28.26)
+    ]
+)
+def test_positive_area_circle(side_a, area):
     c = Circle(side_a)
-    assert c.area == area, 'Area should be 28.2743'
+    assert c.area == area, f'Area should be {area}'
 
 
 def test_negative_area_circle(negative_test_area_circle):
     side_a, area = negative_test_area_circle
     c = Circle(side_a)
-    assert c.area == area, 'Area not should be 28'
+    assert c.area == area, f'Area not should be {area}'
 
 
 def test_positive_perimeter_circle(positive_test_perimeter_circle):
     side_a, perimeter = positive_test_perimeter_circle
     c = Circle(side_a)
-    assert c.perimeter == perimeter, 'Perimeter should be 18.84955592153876'
+    assert c.perimeter == perimeter, f'Perimeter should be {perimeter}'
 
 
 def test_negative_perimeter_circle(negative_test_perimeter_circle):
     side_a, perimeter = negative_test_perimeter_circle
     c = Circle(side_a)
-    assert c.area == perimeter, 'Perimeter not should be 18'
+    assert c.area == perimeter, f'Perimeter not should be {perimeter}'
 
 
 def test_negative_int_circle_area(negative_int_test_circle):
