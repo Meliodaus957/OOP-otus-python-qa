@@ -13,9 +13,9 @@ def test_positive_area_circle(side_a, area):
 
 
 def test_negative_area_circle(negative_test_area_circle):
-    side_a, area = negative_test_area_circle
-    c = Circle(side_a)
-    assert c.area == area, f'Area not should be {area}'
+    side_a, _ = negative_test_area_circle
+    with pytest.raises(ValueError):
+        Circle(side_a)
 
 
 def test_positive_perimeter_circle(positive_test_perimeter_circle):
@@ -25,12 +25,12 @@ def test_positive_perimeter_circle(positive_test_perimeter_circle):
 
 
 def test_negative_perimeter_circle(negative_test_perimeter_circle):
-    side_a, perimeter = negative_test_perimeter_circle
-    c = Circle(side_a)
-    assert c.area == perimeter, f'Perimeter not should be {perimeter}'
+    side_a, _ = negative_test_perimeter_circle
+    with pytest.raises(ValueError):
+        Circle(side_a)
 
 
 def test_negative_int_circle_area(negative_int_test_circle):
     side_a, perimeter = negative_int_test_circle
-    c = Circle(side_a)
-    assert c.area == perimeter, 'Perimeter not should be negative'
+    with pytest.raises(ValueError):
+        Circle(side_a)

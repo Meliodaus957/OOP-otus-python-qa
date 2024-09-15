@@ -39,7 +39,7 @@ def negative_test_area_rectangle_square():
     print("\n Start API")
     print("\n Start DB")
 
-    yield 3, 5, 16
+    yield 0, 5, 18
 
     print("\n End API")
     print('\n End DB')
@@ -72,7 +72,7 @@ def negative_test_perimeter_rectangle_square():
     print('\n Start API')
     print('\n Start DB')
 
-    yield 3, 5, 15
+    yield 0, 5, 15
 
     print("\n End API")
     print('\n End DB')
@@ -103,7 +103,7 @@ def negative_test_perimeter_circle():
     print('\n Start API')
     print('\n Start DB')
 
-    yield 3, 18
+    yield 0, 18
 
     print("\n End API")
     print('\n End DB')
@@ -124,7 +124,7 @@ def negative_test_area_triangle():
     print('\n Start API')
     print('\n Start DB')
 
-    yield 3, 18, 4, 5, 20
+    yield 0, 18, 4, 5, 20
 
     print("\n End API")
     print('\n End DB')
@@ -144,7 +144,7 @@ def negative_test_perimeter_triangle():
     print('\n Start API')
     print('\n Start DB')
 
-    yield 3, 18, 4, 5, 8
+    yield 0, 18, 4, 5, 8
 
     print("\n End API")
     print('\n End DB')
