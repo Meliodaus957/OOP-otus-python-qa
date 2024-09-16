@@ -1,4 +1,5 @@
 from src.Rectangle import Rectangle
+from src.Circle import Circle
 import pytest
 
 
@@ -13,6 +14,24 @@ import pytest
 def test_rectangle_area_positive(side_c, side_d, area_z):
     r = Rectangle(side_c, side_d)
     assert r.area == area_z, f'area should be {area_z}'
+
+
+@pytest.mark.parametrize(
+    'figure_1, figure_2, expected_area',
+    [
+        (Circle(1), Rectangle(2, 4), 11.14),
+        (Rectangle(2, 10), Rectangle(2, 4), 28)
+    ]
+)
+def test_add_area(figure_1, figure_2, expected_area):
+    assert figure_2.add_area(figure_1) == expected_area, \
+        f'Expected area {expected_area}'
+
+
+def test_add_add_area():
+    circle = Circle(1)
+    with pytest.raises(ValueError):
+        circle.add_area(figure=2)
 
 
 def test_rectangle_integer_negative(negative_test_area_rectangle_square):
